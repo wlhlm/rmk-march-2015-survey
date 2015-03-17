@@ -77,6 +77,11 @@
 							<li>forgot to add "KBC" for the Poker</li>
 						</ul>
                     </section>
+					<section>
+						<h2>What is your preferred stabiliser type?</h2>
+						<div id="stab"></div>
+						<p>Stabiliser. Meh.</p>
+					</section>
                     <footer>
                         <h3>Conclusion</h3>
 						<p>All in all interesting changes since previous surveys.</p>
@@ -276,6 +281,23 @@ var brand = add_chart("#brand", {
 	},
 	size: {
 		height: 400
+	}
+}, true);
+
+var stab_data = [
+	['Don\'t care', 407],
+	['Cherry stabiliser', 260],
+	['Wire stabiliser', 134],
+	['Other', 13]
+];
+
+var stab= add_chart("#stab", {
+	data: {
+		columns: stab_data,
+		type: 'pie'
+	},
+	legend: {
+		position: 'right'
 	}
 }, true);
 		</script>
