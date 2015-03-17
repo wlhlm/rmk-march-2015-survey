@@ -9,11 +9,7 @@ function add_chart(element, chart_description, custom_legend) {
 
 	var chart = c3.generate(chart_description);
 	if (custom_legend) {
-		if ("columns" in chart_description.data) {
-			data = chart_description.data.columns;
-		} else if ("rows" in chart_description.data) {
-			data = chart_description.data.rows.slice(1);
-		}
+		data = chart_description.data.columns;
 
 		add_custom_legend(chart, element, data);
 	}
@@ -51,8 +47,6 @@ function add_custom_legend(chart, chart_container, data) {
 		})
 		.attr("class", "c3-legend-item")
 		.selectAll("td")
-		.style("background", "-webkit-linear-gradient(left, #000, #000) no-repeat")
-		.style("background-size", "10px 10px")
 		.data(function(d) { return d; })
 		.enter().append("td")
 		.text(function(d) { return d; });
