@@ -1,0 +1,124 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Operating Systems | /r/MechanicalKeyboards Community Survey March 2015 Results</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/c3.css">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="js/vendor/d3.min.js"></script>
+        <script src="js/vendor/c3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <h1 class="title">/r/MK Community Survey March 2015 Results</h1>
+            </header>
+        </div>
+
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+
+                <article>
+                    <header>
+                        <h1>Preferred Operating Systems</h1>
+						<p>What operating systems run on /r/MK's computers? Let's find out! I will compare the results with <a href="https://en.wikipedia.org/wiki/Usage_share_of_operating_systems">Net Application's statistics</a> of browser usage.</p>
+                    </header>
+                    <section>
+                        <h2>What is your preferred desktop operating system?</h2>
+						<div id="desktop"></div>
+						<p>There recently has been <a href="https://www.reddit.com/r/MechanicalKeyboards/comments/2yk9dz/poll_which_desktop_os_do_you_use/">a poll</a> about desktop operating system usage, which actually got me started on doing a full user survey again. Where you could see similar results.</p>
+						<p>What's the most interesting to me here is the high preference for Linux having even more votes than Mac OS. Looking at the general statistic, Linux has a share of only 1.5% compared to the 16.5%!</p>
+						<p>Age of user base for each operating system in ascending order: Windows → Linux → Mac OS X. Mac OS being on the last place is plausible to me, since the respondents are rather young and Apple's hardware being more expensive compared to their competitors.</p>
+                    </section>
+                    <section>
+						<h2>What is your preferred mobile operating system?</h2>
+						<div id="mobile"></div>
+						<p>The mobile operating system statistic is dominated by Android, which also differs from the general usage share which lists Android and iOS with similar percentages (46% for the former and 42% for the latter). What's funny is, that people rather have no smartphone than Windows Phone. Even in general I don't see Microsoft gaining any mobile market share in the future even with Windows 10.</p>
+						<p>I think the competitive edge of Android over iOS is simply that it can be found any part of the market, while the iPhone exists only in the higher price segment.</p>
+                    </section>
+					<div id="navigation" class="clearfix">
+						<p id="navigationleft"><a href="/">←Demographics</a></p>
+						<p id="navigationright"><a href="/communities.html">Keyboard Communities→</a></p>
+					</div>
+                </article>
+
+                <aside id="side">
+                    <h3>Overview</h3>
+					<ul>
+						<li><a href="/">Demographics</a></li>
+						<li>Preferred Operating System</li>
+						<li><a href="/communities.html">Keyboard Communities</a></li>
+						<li><a href="/kb.html">Preferred Keyboard</a></li>
+						<li><a href="/collection.html">Keyboard Collection</a></li>
+						<li><a href="/caps.html">Keycaps</a></li>
+						<li><a href="/usage.html">Keyboard Usage</a></li>
+						<li><a href="/gb.html">Group Buys and Classifieds</a></li>
+						<li><a href="/stuff.html">Random Stuff</a></li>
+						<li><a href="/wrap.html">Wrap-up</a></li>
+					</ul>
+                </aside>
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+				Survey made by <a href="https://www.reddit.com/user/wlhlm">/u/wlhlm</a> with help from <a href="https://www.reddit.com/user/RaVNzCRoFT">/u/RaVNzCRoFT</a> and Cloudflare. <a href="/wrap.html">More credits</a>.
+            </footer>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/main.js"></script>
+		<script>
+var desktop_data = [
+	['Windows', 589],
+	['Linux', 136],
+	['Mac OS X', 98]
+];
+
+var desktop = add_chart("#desktop", {
+	data: {
+		columns: desktop_data,
+		type: 'pie'
+	},
+	legend: {
+		position: 'right'
+	}
+}, true);
+
+var mobile_data = [
+	['Android', 566],
+	['iOS', 206],
+	['I don\'t own a smartphone', 25],
+	['Windows Phone', 22],
+	['Other', 16]
+];
+
+var mobile = add_chart("#mobile", {
+	data: {
+		columns: mobile_data,
+		type: 'pie'
+	},
+	legend: {
+		position: 'right'
+	}
+}, true);
+		</script>
+    </body>
+</html>

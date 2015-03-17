@@ -1,0 +1,218 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Keyboard Usage | /r/MechanicalKeyboards Community Survey March 2015 Results</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/c3.css">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="js/vendor/d3.min.js"></script>
+        <script src="js/vendor/c3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <h1 class="title">/r/MK Community Survey March 2015 Results</h1>
+            </header>
+        </div>
+
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+
+                <article>
+                    <header>
+                        <h1>Keyboard Usage</h1>
+						<p>How do people use their Keyboards?</p>
+                    </header>
+                    <section>
+                        <h2>What is your typing technique?</h2>
+						<div id="technique"></div>
+						<p>Many can touch type, which is awesome. I wish I could... As far as I know, there are typing classes in the American curriculumn, aren't there?</p>
+						<h3>Flaws</h3>
+						<p>Maybe, I could've phrased the options a bit better.</p>
+                    </section>
+                    <section>
+						<h2>What is your current typing speed?</h2>
+						<div id="speed"></div>
+						<p>Results are compared with the statistics from <a href="http://typing-speed-test.aoeu.eu/">typing-speed-test.aoeu.eu</a>.</p>
+						<p>Results are higher in general which is awesome.</p>
+                    </section>
+					<section>
+						<h2>Do you use a wrist rest?</h2>
+						<div id="rest"></div>
+                    </section>
+					<section>
+						<h2>Do you elevate your keyboard?</h2>
+						<div id="elevate"></div>
+                    </section>
+                    <section>
+						<h2>Do you eat in front of your keyboard?</h2>
+						<div id="eat"></div>
+						<p>You fearless bunch! Looking at the occasional gore pictures, you can see that keyboards <em>get</em> dirty, so be careful.</p>
+                    </section>
+					<div id="navigation" class="clearfix">
+						<p id="navigationleft"><a href="/caps.html">←Keycaps</a></p>
+						<p id="navigationright"><a href="/gb.html">Group Buys and Classifieds→</a></p>
+					</div>
+                </article>
+
+                <aside id="side">
+                    <h3>Overview</h3>
+					<ul>
+						<li><a href="/">Demographics</a></li>
+						<li><a href="os.html">Preferred Operating Systems</a></li>
+						<li><a href="/communities.html">Keyboard Communities</a></li>
+						<li><a href="/kb.html">Preferred Keyboard</a></li>
+						<li><a href="/collection.html">Keyboard Collection</a></li>
+						<li><a href="/caps.html">Keycaps</a></li>
+						<li>Keyboard Usage</li>
+						<li><a href="/gb.html">Group Buys and Classifieds</a></li>
+						<li><a href="/stuff.html">Random Stuff</a></li>
+						<li><a href="/wrap.html">Wrap-up</a></li>
+					</ul>
+                </aside>
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+				Survey made by <a href="https://www.reddit.com/user/wlhlm">/u/wlhlm</a> with help from <a href="https://www.reddit.com/user/RaVNzCRoFT">/u/RaVNzCRoFT</a> and Cloudflare. <a href="/wrap.html">More credits</a>.
+            </footer>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/main.js"></script>
+		<script>
+var technique_data = [
+	['Touch typing (without sight and using the home row keys)', 479],
+	['Self-lerned technique that is not quite touch typing but faster than "hunt and peck" using more than two fingers', 331],
+	['"Hunt and peck" (aka "Brady typing")', 16],
+	['Other', 12]
+];
+
+var technique = add_chart("#technique", {
+	data: {
+		columns: technique_data,
+		type: 'pie'
+	},
+	legend: {
+		position: 'bottom'
+	}
+}, true);
+
+var speed_data = [
+	['x', 0, 15, 35, 45, 55, 65, 75, 85, 95, 105, 115, 125, 135, 145],
+	['/r/mk', 0, 0.02, 0.05, 0.1, 0.13, 0.16, 0.17, 0.13, 0.09, 0.09, 0.04, 0.02, 0.01, 0.01],
+	['typing-speed-test.aoeu.eu', 0, 0.291, 0.235, 0.155, 0.121, 0.058, 0.045, 0.027, 0.015, 0.02, 0, 0, 0, 0]
+];
+
+var speed = add_chart("#speed", {
+	data: {
+		x: 'x',
+		columns: speed_data,
+		type: 'spline',
+	},
+	axis: {
+		x: {
+			label: 'typing speed in wpm',
+			min: 0
+		},
+		y: {
+			tick: {
+				format: d3.format(',%')
+			}
+		}
+	},
+	tooltip: {
+		format: {
+			title: function(d) { return d + " wpm"; },
+			value: d3.format(',%')
+		}
+	},
+	legend: {
+		show: false
+	}
+}, false);
+
+var rest_data = [
+	['No', 568],
+	['Yes', 250]
+];
+
+var rest = add_chart("#rest", {
+	data: {
+		columns: rest_data,
+		type: 'bar',
+		groups: [
+			['No', 'Yes']
+		],
+		labels: true
+	},
+	axis: {
+		rotated: true,
+		x: {
+			show: false
+		},
+		y: {
+			show: false
+		}
+	},
+	bar: {
+		width: 30
+	},
+	size: {
+		height: 100
+	}
+}, false);
+
+var elevate_data = [
+	['No', 485],
+	['Low (.5 inches or less)', 88],
+	['Mid (about .5-1 inches)', 222],
+	['High (more than 1 inch)', 35]
+];
+
+var elevate = add_chart("#elevate", {
+	data: {
+		columns: elevate_data,
+		type: 'pie'
+	},
+	legend: {
+		position: 'right'
+	}
+}, true);
+
+var eat_data = [
+	['Yes', 534],
+	['No', 235],
+	['Yes, but I use a keyboard cover', 49]
+];
+
+var eat = add_chart("#eat", {
+	data: {
+		columns: eat_data,
+		type: 'pie'
+	},
+	legend: {
+		position: 'right'
+	}
+}, true);
+		</script>
+    </body>
+</html>

@@ -1,0 +1,243 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Demographics | /r/MechanicalKeyboards Community Survey March 2015 Results</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/c3.css">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="js/vendor/d3.min.js"></script>
+        <script src="js/vendor/c3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <h1 class="title">/r/MK Community Survey March 2015 Results</h1>
+ <!--               <nav>
+                    <ul>
+                        <li><a href="#">Demographics</a></li>
+                        <li><a href="#">Preferred Operating System</a></li>
+                        <li><a href="#">Keyboard Communities</a></li>
+                    </ul>
+					</nav>-->
+            </header>
+        </div>
+
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+
+                <article>
+                    <header>
+                        <h1>Demographics</h1>
+						<p>Between the 11th and 13th March 2015 a new community survey for <a href="https://www.reddit.com/r/MechanicalKeyboards/">/r/MechanicalKeyboards</a> has been <a href="https://www.reddit.com/r/MechanicalKeyboards/comments/2ypwa2/march_2015_survey_who_are_the_awesome_people/">conducted</a> by <a href="https://www.reddit.com/user/wlhlm/">/u/wlhlm</a>. Here are the results. Please enjoy.
+                    </header>
+                    <section>
+                        <h2>Survey participation</h2>
+						<div id="participation"></div>
+						<p>Participation this time couldn't reach the record numbers of the March 2014 survey or even the numbers of the August 2014 survey. The only thing that has increased is the amount of questions, which I think is one of the reasons for the lower participation, as some people don't have the time to answer all the questions I guess. 842 is still a high number and I think the generated data is still very intersting.
+                    </section>
+                    <section>
+						<h2>What is your gender?</h2>
+						<div id="gender"></div>
+						<p>The gender distribution is hugely male dominated with a ration of 18:1, which is no surprise to me. It's at least a little bit better than Geekhack's <a href="https://geekhack.org/index.php?action=stats">gender distribution</a> (30:1).</p>
+					</section>
+					<section>
+						<h2>What is your age?</h2>
+						<div id="age"></div>
+						<p>This subreddit attracts a very young audience.</p>
+					</section>
+					<section>
+						<h2>Where do you live?</h2>
+						<div id="location"></div>
+						<p>Nothing has changed compared to previous surveys</p>
+					</section>
+					</section>
+						<h2>What is your profession?</h2>
+						<div id="profession"></div>
+						<p>A huge portotion (almost three quarters) of the participants are students, which makes sense considering the young audience. Results are similar to previous surveys.</p>
+                    </section>
+                    <footer>
+						<p>I wasn't able to find demographics for Reddit in general and so I couldn't compare the them with this subreddit. If you have more information on that, please let me know!</p>
+                    </footer>
+					<div id="navigation" class="clearfix">
+						<p id="navigationright"><a href="/os.html">Preferred Operating System→</a></p>
+					</div>
+                </article>
+
+                <aside id="side">
+                    <h3>Overview</h3>
+					<ul>
+						<li>Demographics</li>
+						<li><a href="/os.html">Preferred Operating System</a></li>
+						<li><a href="/communities.html">Keyboard Communities</a></li>
+						<li><a href="/kb.html">Preferred Keyboard</a></li>
+						<li><a href="/collection.html">Keyboard Collection</a></li>
+						<li><a href="/caps.html">Keycaps</a></li>
+						<li><a href="/usage.html">Keyboard Usage</a></li>
+						<li><a href="/gb.html">Group Buys and Classifieds</a></li>
+						<li><a href="/stuff.html">Random Stuff</a></li>
+						<li><a href="/wrap.html">Wrap-up</a></li>
+					</ul>
+                </aside>
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+				Survey made by <a href="https://www.reddit.com/user/wlhlm">/u/wlhlm</a> with help from <a href="https://www.reddit.com/user/RaVNzCRoFT">/u/RaVNzCRoFT</a> and Cloudflare. <a href="/wrap.html">More credits</a>.
+            </footer>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/main.js"></script>
+		<script>
+var participation_data = [
+	['Questions', 4, 6, 7, 10, 18, 7, 44],
+	['Responses', 210, 364, 354, 517, 1793, 980, 842]
+];
+
+var participation = add_chart("#participation", {
+	data: {
+		columns: participation_data,
+		axes: {
+			Questions: 'y2'
+		},
+		types: {
+			Responses: 'bar'
+		}
+	},
+	axis: {
+		x: {
+			type: 'category',
+			categories: ['Sep 2012', 'Nov 2012', 'Jan 2013', 'Dec 2013', 'Mar 2014', 'Aug 2014', 'Mar 2015']
+		},
+		y: {
+			label: {
+				text: '# of responses',
+				position: 'outer-middle'
+			}
+		},
+		y2: {
+			show: true,
+			label: {
+				text: '# of questions',
+				position: 'outer-middle'
+			}
+		}
+	}
+}, false);
+
+var gender_data = [
+	['Female', 44],
+	['Male', 790],
+	['Other', 7]
+];
+
+var gender = add_chart("#gender", {
+	data: {
+		columns: gender_data,
+		type: 'bar',
+		groups: [
+			['Female', 'Male', 'Other']
+		]
+	},
+	axis: {
+		rotated: true,
+		x: {
+			show: false
+		},
+		y: {
+			show: false
+		}
+	},
+	bar: {
+		width: 30
+	},
+	size: {
+		height: 100
+	}
+}, false);
+
+var age = add_chart("#age", {
+	bindto: '#age',
+	data: {
+		columns: [
+			['Male', 234, 212, 154, 108, 69, 12],
+			['Female', 6, 12, 12, 9, 3, 2]
+		],
+		type: 'bar'
+	},
+	axis: {
+		rotated: true,
+		x: {
+			type: 'category',
+			categories: ['13-17', '18-21', '22-25', '26-30', '31-40', '41+']
+		}
+	},
+}, false);
+
+var local_data = [
+	['North America', 550],
+	['Europe', 197],
+	['Asia', 40],
+	['Australia/NZ', 27],
+	['South America', 6],
+	['Africa', 1]
+];
+
+var local = add_chart("#location", {
+	data: {
+		columns: local_data,
+		type: 'pie'
+	},
+	legend: {
+		position: 'right'
+	},
+}, true);
+
+var profession_data = [
+	['Undergraduate Student', 232],
+	['Middle/high school sutdent', 216],
+	['Administrator/IT', 88],
+	['Engineer', 70],
+	['Graduate student', 45],
+	['Software developer', 34],
+	['Business', 25],
+	['Currently unemployed', 23],
+	['Retail', 13],
+	['Scientist', 8],
+	['Medical', 7],
+	['Education', 6],
+	['Graphic design', 3],
+	['Sales/marketing', 2],
+	['Other', 58]
+];
+
+var profession = add_chart("#profession", {
+	data: {
+		columns: profession_data,
+		type: 'pie'
+	},
+	legend: {
+		position: 'right'
+	}
+}, true);
+		</script>
+    </body>
+</html>

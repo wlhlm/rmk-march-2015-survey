@@ -1,0 +1,203 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Keycaps | /r/MechanicalKeyboards Community Survey March 2015 Results</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/c3.css">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="js/vendor/d3.min.js"></script>
+        <script src="js/vendor/c3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <h1 class="title">/r/MK Community Survey March 2015 Results</h1>
+            </header>
+        </div>
+
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+
+                <article>
+                    <header>
+                        <h1>Keycaps</h1>
+                    </header>
+                    <section>
+                        <h2>What is your preferred keycap profile?</h2>
+						<div id="profile"></div>
+                    </section>
+                    <section>
+						<h2>What is your preferred keycap material?</h2>
+						<div id="material"></div>
+						<p>PBT wins. No surprise as most PBT caps are made with higher quality than your usual ABS caps. Though some say, GMK's ABS caps are the best.</p>
+                    </section>
+                    <section>
+						<h2>What type of keycap legend printing do you prefer?</h2>
+						<div id="printing"></div>
+                    </section>
+                    <section>
+						<h2>What is your favourite keycap manufacturer?</h2>
+						<div id="capper"></div>
+                    </section>
+                    <section>
+						<h2>How many novelty keycaps do you own?</h2>
+						<div id="novelty"></div>
+                    </section>
+                    <footer>
+                        <h3>Verdict</h3>
+						<p>Many don't that much for keycaps, as long as they are PBT.</p>
+                    </footer>
+					<div id="navigation" class="clearfix">
+						<p id="navigationleft"><a href="/collection.html">←Keyboard Collection</a></p>
+						<p id="navigationright"><a href="/usage.html">Keyboard Usage→</a></p>
+					</div>
+                </article>
+
+                <aside id="side">
+                    <h3>Overview</h3>
+					<ul>
+						<li><a href="/">Demographics</a></li>
+						<li><a href="/os.html">Preferred Operating Systems</a></li>
+						<li><a href="/communities.html">Keyboard Communities</a></li>
+						<li><a href="/kb.html">Preferred Keyboard</a></li>
+						<li><a href="/collection.html">Keyboard Collection</a></li>
+						<li>Keycaps</li>
+						<li><a href="/usage.html">Keyboard Usage</a></li>
+						<li><a href="/gb.html">Group Buys and Classifieds</a></li>
+						<li><a href="/stuff.html">Random Stuff</a></li>
+						<li><a href="/wrap.html">Wrap-up</a></li>
+					</ul>
+                </aside>
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+				Survey made by <a href="https://www.reddit.com/user/wlhlm">/u/wlhlm</a> with help from <a href="https://www.reddit.com/user/RaVNzCRoFT">/u/RaVNzCRoFT</a> and Cloudflare. <a href="/wrap.html">More credits</a>.
+            </footer>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/main.js"></script>
+		<script>
+var profile_data = [
+	['OEM', 235],
+	['Don\'t care', 188],
+	['Cherry (DCS)', 178],
+	['DSA', 130],
+	['SA', 68],
+	['Other', 19]
+];
+
+var profile = add_chart("#profile", {
+	data: {
+		columns: profile_data,
+		type: 'pie'
+	},
+	legend: {
+		position: 'right'
+	}
+}, true);
+
+var material_data = [
+	['PBT', 479],
+	['Don\'t care', 194],
+	['ABS', 94],
+	['Metal', 13],
+	['POM', 12],
+	['Other', 23]
+];
+
+var material = add_chart("#material", {
+	data: {
+		columns: material_data,
+		type: 'pie'
+	},
+	legend: {
+		position: 'right'
+	}
+}, true);
+
+var printing_data = [
+	['Doubleshot', 341],
+	['Don\'t care', 140],
+	['Blank', 109],
+	['Dye sublimation', 80],
+	['Side-printing', 60],
+	['Lasered', 57],
+	['Engraved', 24],
+	['Padprinting', 1]
+];
+
+var printing = add_chart("#printing", {
+	data: {
+		columns: printing_data,
+		type: 'pie'
+	},
+	legend: {
+		position: 'right'
+	}
+}, true);
+
+var capper_data = [
+	['Don\'t care', 241],
+	['Signature Plastics (PimpMyKeybard)', 159],
+	['Vortex', 97],
+	['GMK', 78],
+	['Ducky', 50],
+	['WASDKeyboard', 49],
+	['Cherry', 32],
+	['Tai-Hao', 23],
+	['Keycool', 16],
+	['IMSTO', 10],
+	['Other', 43]
+];
+
+var capper = add_chart("#capper", {
+	data: {
+		columns: capper_data,
+		type: 'pie'
+	},
+	legend: {
+		position: 'right'
+	}
+}, true);
+
+var novelty_data = [
+	['0', 553],
+	['1-2', 126],
+	['3-5', 79],
+	['6-10', 26],
+	['11-15', 11],
+	['16+', 34]
+];
+
+var novelty = add_chart("#novelty", {
+	data: {
+		columns: novelty_data,
+		type: 'pie'
+	},
+	legend: {
+		position: 'right'
+	}
+}, true);
+		</script>
+    </body>
+</html>

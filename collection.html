@@ -1,0 +1,289 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Keyboard Collection | /r/MechanicalKeyboards Community Survey March 2015 Results</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/c3.css">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="js/vendor/d3.min.js"></script>
+        <script src="js/vendor/c3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <h1 class="title">/r/MK Community Survey March 2015 Results</h1>
+            </header>
+        </div>
+
+        <div class="main-container">
+            <div class="main wrapper clearfix" id="mon">
+
+                <article>
+                    <header>
+                        <h1>Keyboard Collection</h1>
+						<p>With mechanical keyboards for some being a hobby like many else, they start collecting and looking for the "holy grail". Let's see how the /r/MK community performs in keyboard collecting.</p>
+                    </header>
+                    <section>
+                        <h2>How many mechanical keyboard do you own?</h2>
+						<div id="coll"></div>
+						<p>Two thirds have more than one mechanical keyboard! Also more people with more than 10 keyboards then people with 6-9. If you have more than 5 keyboards you might as well keep going with your collection...</p>
+						<p>Fun fact: 40% of people with more than one mechanical keyboard plan on buying/building a new keyboard within the next month.</p>
+                    </section>
+                    <section>
+						<h2>When did you use your fist mechanical keyboard?</h2>
+						<div id="firstwhen"></div>
+                    </section>
+                    <section>
+						<h2>What was your first mechanical keyboard?</h2>
+						<p>I skip this question simply because it was a free form field and it would have cost me too much effort to count the votes.</p>
+                    </section>
+                    <section>
+						<h2>How much money do you spend on average on a single keyboard?</h2>
+						<p><i>This includes also includes modifications.</i></p>
+						<div id="money"></div>
+                    </section>
+                    <section>
+						<h2>How much money in total have you spend on mechanical keyboards so far?</h2>
+						<div id="total"></div>
+						<p>Some didn't want to estimate their total spendings on mechanical keyboards. This would at least explain the high number of votes for "$0" and only 90% participation. To be honest, I'm scared too of the amount of money I've put into keyboards.</p>
+						<p>One third has spend more than $300 on keyboards.</p>
+						<p>Fun fact: I only later added options for $1001-$2000 after someone <a href="https://www.reddit.com/r/MechanicalKeyboards/comments/2ypwa2/march_2015_survey_who_are_the_awesome_people/cpdvk19">complained that the limits would be too low after spending $1000 in one month alone</a>.</p>
+                    </section>
+                    <section>
+						<h2>Do you plan on buying/building a new mechanical keyboard within the next month?</h2>
+						<div id="next"></div>
+                    </section>
+                    <section>
+						<h2>How does your wallet feel?</h2>
+						<div id="wallet"></div>
+						<p>I don't understand these results after many saying they would buy a new keyboard if there wallet wasn't empty in the previous question. In my perception, empty wallets feel sad rather than happy.</p>
+                    </section>
+                    <footer>
+                        <h3>Verdict</h3>
+						<p>Very money. Such spending. Much keyboard.</p>
+                    </footer>
+					<div id="navigation" class="clearfix">
+						<p id="navigationleft"><a href="/">←Preferred Keyboard</a></p>
+						<p id="navigationright"><a href="/caps.html">Keycaps→</a></p>
+					</div>
+                </article>
+
+                <aside id="side">
+                    <h3>Overview</h3>
+					<ul>
+						<li><a href="/">Demographics</a></li>
+						<li><a href="/os.html">Preferred Operating Systems</a></li>
+						<li><a href="/communities.html">Keyboard Communities</a></li>
+						<li><a href="/kb.html">Preferred Keyboard</a></li>
+						<li>Keyboard Collection</li>
+						<li><a href="/caps.html">Keycaps</a></li>
+						<li><a href="/usage.html">Keyboard Usage</a></li>
+						<li><a href="/gb.html">Group Buys and Classifieds</a></li>
+						<li><a href="/stuff.html">Random Stuff</a></li>
+						<li><a href="/wrap.html">Wrap-up</a></li>
+					</ul>
+                </aside>
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+				Survey made by <a href="https://www.reddit.com/user/wlhlm">/u/wlhlm</a> with help from <a href="https://www.reddit.com/user/RaVNzCRoFT">/u/RaVNzCRoFT</a> and Cloudflare. <a href="/wrap.html">More credits</a>.
+            </footer>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/main.js"></script>
+		<script>
+var coll_data = [
+	['0', 71, null, null, null, null, null, null],
+	['1', null, 283, null, null, null, null, null],
+	['2', null, null, 204, null, null, null, null],
+	['3', null, null, null, 121, null, null, null],
+	['4-5', null, null, null, null, 96, null, null],
+	['6-9', null, null, null, null, null, 32, null],
+	['10+', null, null, null, null, null, null, 33]
+];
+
+var coll = add_chart("#coll", {
+	data: {
+		columns: coll_data,
+		type: 'bar',
+		groups: [
+			['0', '1', '2', '3', '4-5', '6-9', '10+']
+		]
+	},
+	axis: {
+		x: {
+			type: 'category',
+			categories: ['0', '1', '2', '3', '4-5', '6-9', '10+']
+		}
+	},
+	legend: {
+		show: false
+	}
+}, true);
+
+var firstwhen_data = [
+	['Less than 1 month ago', 92, null, null, null, null, null, null],
+	['1-3 months ago', null, 104, null, null, null, null, null],
+	['3-6 months ago', null, null, 96, null, null, null, null],
+	['6-12 months ago', null, null, null, 116, null, null, null],
+	['1-3 years ago', null, null, null, null, 254, null, null],
+	['3-5 years ago', null, null, null, null, null, 70, null],
+	['5+ years ago', null, null, null, null, null, null, 92]
+];
+
+var firstwhen = add_chart("#firstwhen", {
+	data: {
+		columns: firstwhen_data,
+		type: 'bar',
+		groups: [
+			['Less than 1 month ago', '1-3 months ago', '3-6 months ago', '6-12 months ago', '1-3 years ago', '3-5 years ago', '5+ years ago']
+		]
+	},
+	axis: {
+		x: {
+			type: 'category',
+			categories: ['Less than 1 month ago', '1-3 months ago', '3-6 months ago', '6-12 months ago', '1-3 years ago', '3-5 years ago', '5+ years ago']
+		}
+	},
+	legend: {
+		show: false
+	}
+}, true);
+
+var money_data = [
+	['$0', 32, null, null, null, null, null, null, null, null],
+	['$1-$50', null, 37, null, null, null, null, null, null, null],
+	['$51-$100', null, null, 110, null, null, null, null, null, null],
+	['$101-$150', null, null, null, 294, null, null, null, null, null],
+	['$151-$200', null, null, null, null, 210, null, null, null, null],
+	['$201-$250', null, null, null, null, null, 85, null, null, null],
+	['$251-$300', null, null, null, null, null, null, 34, null, null],
+	['$301-$400', null, null, null, null, null, null, null, 23, null],
+	['$401+', null, null, null, null, null, null, null, null, 13]
+];
+
+var money = add_chart("#money", {
+	data: {
+		columns: money_data,
+		type: 'bar',
+		groups: [
+			['$0', '$1-$50', '$51-$100', '$101-$150', '$151-$200', '$201-$250', '$251-$300', '$301-$400', '$401+']
+		]
+	},
+	axis: {
+		x: {
+			type: 'category',
+			categories: ['$0', '$1-$50', '$51-$100', '$101-$150', '$151-$200', '$201-$250', '$251-$300', '$301-$400', '$401+']
+		}
+	},
+	legend: {
+		show: false
+	}
+}, true);
+
+var total_data = [
+	['$0', 62, null, null, null, null, null, null, null, null, null],
+	['$1-$100', null, 67, null, null, null, null, null, null, null, null],
+	['$101-$200', null, null, 212, null, null, null, null, null, null, null],
+	['$201-$300', null, null, null, 127, null, null, null, null, null, null],
+	['$301-$400', null, null, null, null, 89, null, null, null, null, null],
+	['$401-$500', null, null, null, null, null, 61, null, null, null, null],
+	['$501-$600', null, null, null, null, null, null, 63, null, null, null],
+	['$601-$800', null, null, null, null, null, null, null, 48, null, null],
+	['$801-$1000', null, null, null, null, null, null, null, null, 21, null],
+	['$1001+', null, null, null, null, null, null, null, null, null, 87]
+];
+
+var total = add_chart("#total", {
+	data: {
+		columns: total_data,
+		type: 'bar',
+		groups: [
+			['$0', '$1-$100', '$101-$200', '$201-$300', '$301-$400', '$401-$500', '$501-$600', '$601-$800', '$801-$1000', '$1001+']
+		]
+	},
+	axis: {
+		x: {
+			type: 'category',
+			categories: ['$0', '$1-$100', '$101-$200', '$201-$300', '$301-$400', '$401-$500', '$501-$600', '$601-$800', '$801-$1000', '$1001+']
+		}
+	},
+	legend: {
+		show: false
+	}
+}, true);
+
+var next_data = [
+	['I would like to, but my wallet is empty :(', 318],
+	['Yes', 302],
+	['No', 221]
+];
+
+var next = add_chart("#next", {
+	data: {
+		columns: next_data,
+		type: 'pie'
+	},
+	legend: {
+		position: 'bottom'
+	},
+	size: {
+		height: 200
+	}
+}, false);
+
+var wallet_data = [
+	[';_; (sad)', 12, null, null, null, null],
+	['2', null, 19, null, null, null],
+	['3', null, null, 98, null, null],
+	['4', null, null, null, 358, null],
+	[':D (happy)', null, null, null, null, 345]
+];
+
+var wallet = add_chart("#wallet", {
+	data: {
+		columns: wallet_data,
+		type: 'bar',
+		groups: [
+			[';_; (sad)', '2', '3', '4', ':D (happy)']
+		]
+	},
+	axis: {
+		x: {
+			type: 'category',
+			categories: [';_; (sad)', '←', '', '→', ':D (happy)']
+		}
+	},
+	legend: {
+		show: false
+	}
+}, true);
+
+uniform_colors(money);
+uniform_colors(coll);
+uniform_colors(firstwhen);
+uniform_colors(total);
+uniform_colors(wallet);
+		</script>
+    </body>
+</html>

@@ -1,0 +1,237 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Keyboard Communities | /r/MechanicalKeyboards Community Survey March 2015 Results</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/c3.css">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="js/vendor/d3.min.js"></script>
+        <script src="js/vendor/c3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <h1 class="title">/r/MK Community Survey March 2015 Results</h1>
+            </header>
+        </div>
+
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+
+                <article>
+                    <header>
+                        <h1>Keyboard Communities</h1>
+                    </header>
+                    <section>
+                        <h2>What was the first keyboard community you joined/subscribed to?</h2>
+						<div id="firstcomm"></div>
+						<h3>Flaws</h3>
+						<p>I think it would have been better to ask which communities have people joined at all instead of which was their first one.</p>
+                    </section>
+                    <section>
+						<h2>In which keyboard community do you spend most of your time?</h2>
+						<div id="time"></div>
+                    </section>
+					<section>
+						<h2> How long have you been browsing /r/MechanicalKeyboards?</h2>
+						<div id="long"></div>
+					</section>
+					<section>
+						<h2>What are the reasons you browse /r/MechanicalKeyboards?</h2>
+						<div id="reasons"></div>
+						<p>Interestingly, Modifications climbs to the top of reasons why /r/MK is browsed. I thought keyboard art would be ranked higher than 5th place, as Reddit seems to be mostly about pictures with <a href="https://www.reddit.com/r/pics">/r/pics</a>, <a href="https://www.reddit.com/r/funny">/r/funny</a>, <a href="https://www.reddit.com/r/aww">/r/aww</a>, etc.</p>
+						<p>Vintage keyboards got quite a number of votes, though I feel like there's much more expertise for that at <a href="http://deskthority.net/">Deskthority</a>.</p>
+						<h3>Flaws</h3>
+						<ul>
+							<li>I forgot to include "funny content" as a reason.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>How would you rate the /r/MechanicalKeyboards community in general?</h2>
+						<div id="rating"></div>
+						<p>I'm glad so many enjoy this commuity! I hope we can get even more 5-points-ratings in the future.</p>
+					</section>
+					<div id="navigation" class="clearfix">
+						<p id="navigationleft"><a href="/os.html">←Preferred Operating Systems</a></p>
+						<p id="navigationright"><a href="/kb.html">Preferred Keyboard→</a></p>
+					</div>
+                </article>
+
+                <aside id="side">
+                    <h3>Overview</h3>
+					<ul>
+						<li><a href="/">Demographics</a></li>
+						<li><a href="/os.html">Preferred Operating Systems</a></li>
+						<li>Keyboard Communities</li>
+						<li><a href="/kb.html">Preferred Keyboard</a></li>
+						<li><a href="/collection.html">Keyboard Collection</a></li>
+						<li><a href="/caps.html">Keycaps</a></li>
+						<li><a href="/usage.html">Keyboard Usage</a></li>
+						<li><a href="/gb.html">Group Buys and Classifieds</a></li>
+						<li><a href="/stuff.html">Random Stuff</a></li>
+						<li><a href="/wrap.html">Wrap-up</a></li>
+					</ul>
+                </aside>
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+				Survey made by <a href="https://www.reddit.com/user/wlhlm">/u/wlhlm</a> with help from <a href="https://www.reddit.com/user/RaVNzCRoFT">/u/RaVNzCRoFT</a> and Cloudflare. <a href="/wrap.html">More credits</a>.
+            </footer>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/main.js"></script>
+		<script>
+var firstcomm_data = [
+	['/r/MechanicalKeyboard', 712],
+	['Geekhack', 79],
+	['I haven\'t joined one yet', 28],
+	['Deskthority', 8],
+	['/r/Keyboard', 4],
+	['Other', 7]
+];
+
+var firstcomm = add_chart("#firstcomm", {
+	data: {
+		columns: firstcomm_data,
+		type: 'pie'
+	},
+	legend: {
+		position: 'right'
+	}
+}, true);
+
+var time_data = [
+	['/r/MechanicalKeyboard', 745],
+	['Geekhack', 60],
+	['Deskthority', 14],
+	['/r/Keyboard', 6],
+	['Other', 5]
+];
+
+var time = add_chart("#time", {
+	data: {
+		columns: time_data,
+		type: 'pie'
+	},
+	legend: {
+		position: 'right'
+	}
+}, true);
+
+var long_data = [
+	['Less than 1 month', 63, null, null, null, null, null],
+	['1-3 months', null, 184, null, null, null, null],
+	['3-6 months', null, null, 178, null, null, null],
+	['6-12 months', null, null, null, 194, null, null],
+	['1-2 years', null, null, null, null, 193, null],
+	['Since the beginning', null, null, null, null, null, 30]
+];
+
+var long = add_chart("#long", {
+	data: {
+		columns: long_data,
+		type: 'bar',
+		groups: [
+			['Less than 1 month', '1-3 months', '3-6 months', '6-12 months', '1-2 years', 'Since the beginning']
+		]
+	},
+	axis: {
+		rotated: true,
+		x: {
+			type: 'category',
+			categories: ['Less than 1 month', '1-3 months', '3-6 months', '6-12 months', '1-2 years', 'Since the beginning']
+		}
+	},
+	legend: {
+		show: false
+	}
+}, true);
+
+var reasons_data = [
+	['Modifications', 562, null, null, null, null, null, null, null, null, null, null, null, null],
+	['Keyboard SCIENCE!!', null, 552, null, null, null, null, null, null, null, null, null, null, null],
+	['Keyboard news', null, null, 530, null, null, null, null, null, null, null, null, null, null],
+	['Reviews', null, null, null, 489, null, null, null, null, null, null, null, null, null],
+	['Keyboard art', null, null, null, null, 483, null, null, null, null, null, null, null, null],
+	['General advice', null, null, null, null, null, 462, null, null, null, null, null, null, null],
+	['Ripster content', null, null, null, null, null, null, 369, null, null, null, null, null, null],
+	['Special deals', null, null, null, null, null, null, null, 346, null, null, null, null, null],
+	['Vintage keyboards', null, null, null, null, null, null, null, null, 304, null, null, null, null],
+	['Purchase help', null, null, null, null, null, null, null, null, null, 272, null, null, null],
+	['Drama', null, null, null, null, null, null, null, null, null, null, 145, null, null],
+	['Vendor support', null, null, null, null, null, null, null, null, null, null, null, 106, null],
+	['Other', null, null, null, null, null, null, null, null, null, null, null, null, 52]
+];
+
+var reasons = add_chart("#reasons", {
+	data: {
+		columns: reasons_data,
+		type: 'bar',
+		groups: [
+			['Modifications', 'Keyboard SCIENCE!!', 'Keyboard news', 'Reviews', 'Keyboard art', 'General advice', 'Ripster content', 'Special deals', 'Vintage keyboards', 'Purchase help', 'Drama', 'Vendor support', 'Other']
+		]
+	},
+	axis: {
+		rotated: true,
+		x: {
+			type: 'category',
+			categories: ['Modifications', 'Keyboard SCIENCE!!', 'Keyboard news', 'Reviews', 'Keyboard art', 'General advice', 'Ripster content', 'Special deals', 'Vintage keyboards', 'Purchase help', 'Drama', 'Vendor support', 'Other']
+		}
+	},
+	legend: {
+		show: false
+	}
+}, true);
+
+var rating_data = [
+	['1 rude/unhelpful', 12, null, null, null, null],
+	['2', null, 19, null, null, null],
+	['3', null, null, 98, null, null],
+	['4', null, null, null, 358, null],
+	['5 polite/very helpful', null, null, null, null, 345]
+];
+
+var rating = add_chart("#rating", {
+	data: {
+		columns: rating_data,
+		type: 'bar',
+		groups: [
+			['1 rude/unhelpful', '2', '3', '4', '5 polite/very helpful']
+		]
+	},
+	axis: {
+		x: {
+			type: 'category',
+			categories: ['1 rude/unhelpful', '2', '3', '4', '5 polite/very helpful']
+		}
+	},
+	legend: {
+		show: false
+	}
+}, true);
+
+uniform_colors(long);
+uniform_colors(rating);
+		</script>
+    </body>
+</html>
