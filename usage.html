@@ -37,6 +37,10 @@
                         <h1>Keyboard Usage</h1>
 						<p>How do people use their Keyboards?</p>
                     </header>
+					<section>
+						<h2>What keyboard modifications have you done before?</h2>
+						<div id="keymod"></div>
+					</section>
                     <section>
                         <h2>What is your typing technique?</h2>
 						<div id="technique"></div>
@@ -211,6 +215,44 @@ var eat = add_chart("#eat", {
 	},
 	legend: {
 		position: 'right'
+	}
+}, true);
+
+var keymod_data = [
+	['I\'ve never modded a keyboard before', 341, null, null, null, null, null, null, null, null, null, null, null],
+	['Switches (new switches, lube, springs, O-rings, ...)', null, 290, null, null, null, null, null, null, null, null, null, null],
+	['Case (Altering, new case, dampening, ...)', null, null, 197, null, null, null, null, null, null, null, null, null],
+	['Cable (sleeved cable, ...)', null, null, null, 139, null, null, null, null, null, null, null, null],
+	['Backlight (adding backlighting, changing color, ...)', null, null, null, null, 100, null, null, null, null, null, null, null],
+	['Controller', null, null, null, null, null, 77, null, null, null, null, null, null],
+	['Stabiliser', null, null, null, null, null, null, 65, null, null, null, null, null],
+	['Firmware modification', null, null, null, null, null, null, null, 65, null, null, null, null],
+	['Connector (AT→PS/2, ...)', null, null, null, null, null, null, null, null, 63, null, null, null],
+	['Form factor (Full-size→TKL, ...)', null, null, null, null, null, null, null, null, null, 22, null, null],
+	['Making it wireless', null, null, null, null, null, null, null, null, null, null, 14, null],
+	['Other', null, null, null, null, null, null, null, null, null, null, null, 27]
+];
+
+var keymod = add_chart("#keymod", {
+	data: {
+		columns: keymod_data,
+		type: 'bar',
+		groups: [
+			['I\'ve never modded a keyboard before', 'Switches (new switches, lube, springs, O-rings, ...)', 'Case (Altering, new case, dampening, ...)', 'Cable (sleeved cable, ...)', 'Backlight (adding backlighting, changing color, ...)', 'Controller', 'Stabiliser', 'Firmware modification', 'Connector (AT→PS/2, ...)', 'Form factor (Full-size→TKL, ...)', 'Making it wireless', 'Other']
+		]
+	},
+	axis: {
+		rotated: true,
+		x: {
+			type: 'category',
+			categories: ['I\'ve never modded a keyboard before', 'Switches (new switches, lube, springs, O-rings, ...)', 'Case (Altering, new case, dampening, ...)', 'Cable (sleeved cable, ...)', 'Backlight (adding backlighting, changing color, ...)', 'Controller', 'Stabiliser', 'Firmware modification', 'Connector (AT→PS/2, ...)', 'Form factor (Full-size→TKL, ...)', 'Making it wireless', 'Other']
+		}
+	},
+	legend: {
+		show: false
+	},
+	size: {
+		height: 500
 	}
 }, true);
 		</script>
