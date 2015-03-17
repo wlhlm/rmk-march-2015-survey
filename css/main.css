@@ -223,13 +223,13 @@ a:focus {
 }
 
 .main {
-	background-image: url(/img/snoo.png);
+	background-image: url(img/snoo.png);
 	background-repeat: no-repeat;
 	background-position: left bottom;
 }
 
 #mon {
-	background-image: url(/img/doge.png);
+	background-image: url(img/doge.png);
 }
 
 img {
