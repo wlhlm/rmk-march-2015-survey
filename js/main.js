@@ -50,7 +50,6 @@ function add_custom_legend(chart, chart_container, data) {
 			chart.revert();
 		})
 		.attr("class", "c3-legend-item")
-		//.style("background-color", function(id) { return chart.color(id[0]); })
 		.selectAll("td")
 		.style("background", "-webkit-linear-gradient(left, #000, #000) no-repeat")
 		.style("background-size", "10px 10px")
