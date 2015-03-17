@@ -32,7 +32,7 @@ function add_custom_legend(chart, chart_container, data) {
 	for (var j = 0; j < data.length; j++) {
 		data[j].push(percentage(data[j][1] / num_responses));
 	}
-	data.push(['Total', sum, percentage(sum / num_responses)]);
+	data.push(['Total', sum + ' of ' + num_responses, percentage(sum / num_responses)]);
 
 	d3.select(chart_container).append("table")
 		.attr("class", "legendtbl")
