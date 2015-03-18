@@ -17,7 +17,7 @@ function add_chart(element, chart_description, custom_legend) {
 	return chart;
 }
 
-function round_percentage(num) { return Math.round(num * 10000) / 100; }
+function round_percentage(num) { return Math.round(num * 1000) / 10; }
 function percentage(num) { return round_percentage(num) + '%'; }
 
 function add_custom_legend(chart, chart_container, data) {
